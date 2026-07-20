@@ -1,0 +1,8 @@
+# Code owners for mlopsp1
+# NOTE: This demo is run under a single GitHub account (Asc-85129) simulating
+# all four roles from plan.md (P1 Owner, P2 Maintainer, P3 Developer, P4 Intern).
+# In a real multi-person team, replace the owner below with each person's
+# actual GitHub username per the mapping in plan.md section 1.
+
+/src/backend/  @Asc-85129
+/src/frontend/ @Asc-85129

@@ -1,0 +1,11 @@
+{
+  "name": "mlopsp1-login-demo",
+  "version": "1.0.0",
+  "description": "Login-form demo app used to showcase the end-to-end Git/GitHub team workflow described in plan.md",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "test": "node src/backend/server.test.js"
+  },
+  "license": "MIT"
+}
