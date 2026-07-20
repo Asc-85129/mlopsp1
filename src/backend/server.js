@@ -28,6 +28,12 @@ const server = http.createServer((req, res) => {
   } else if (req.method === "POST" && req.url === "/api/login") {
     let body = "";
     req.on("data", (chunk) => (body += chunk));
+    req.on("error", () => {
+      // A client aborting mid-upload emits 'error' on the request stream.
+      // Without a listener here, Node rethrows it as an uncaught exception
+      // and crashes the whole process, not just this one request.
+      res.destroy();
+    });
     req.on("end", () => {
       let username, password;
       try {
