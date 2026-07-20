@@ -1,9 +1,14 @@
 document.getElementById("login-form").addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const username = document.getElementById("username").value;
+  const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value;
   const message = document.getElementById("login-message");
+
+  if (!username || !password) {
+    message.textContent = "Username and password are required.";
+    return;
+  }
 
   const response = await fetch("/api/login", {
     method: "POST",
