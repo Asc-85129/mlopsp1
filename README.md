@@ -7,7 +7,7 @@ Intern**.
 
 - The full workflow plan being demonstrated: [`plan.md`](./plan.md)
 - The step-by-step record of what was actually executed against this repo,
-  with links to the real branches/PRs/tags produced: [`DEMO.md`](./DEMO.md)
+  with links to the real branches, PRs, and tags produced: [`DEMO.md`](./DEMO.md)
 - Contribution/branching conventions: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
 ## The demo app
