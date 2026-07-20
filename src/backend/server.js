@@ -29,7 +29,14 @@ const server = http.createServer((req, res) => {
     let body = "";
     req.on("data", (chunk) => (body += chunk));
     req.on("end", () => {
-      const { username, password } = JSON.parse(body || "{}");
+      let username, password;
+      try {
+        ({ username, password } = JSON.parse(body || "{}"));
+      } catch (err) {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ success: false, error: "Invalid JSON body" }));
+        return;
+      }
       const ok = Boolean(users[username]) && users[username] === password;
       res.writeHead(ok ? 200 : 401, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ success: ok }));
