@@ -23,6 +23,7 @@ src/frontend/  index.html, login.js, style.css — login form UI
 Run it locally:
 
 ```
+npm install
 npm start
 # open http://localhost:3000
 ```
