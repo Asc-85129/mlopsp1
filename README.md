@@ -2,7 +2,7 @@
 
 **MLOps Practical 1** — a hands-on, reproducible demo of an end-to-end Git/GitHub
 team workflow (branching strategy, protected branches, pull-request review,
-merge-conflict resolution, releases, and hotfixes), simulated for a 4-person
+merge-conflict resolution, releases, and hotfixes), simulated for a 5-person
 team: **Owner, Maintainer, Developer, Intern**.
 
 The goal of this repo isn't the app itself — it's the *process*. The login
